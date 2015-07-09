@@ -1,4 +1,4 @@
-This is the API, which loads csv file to elastic
+This is the API, which loads csv file to elasticsearch
 
 Method: POST
 
@@ -13,5 +13,5 @@ http://host:port/services/datastore/csv-elastic
   "es_cluster_name" : "test",
   "es_index" : "test",
   "es_index_type" : "test"
-  "file"  : "<file what we are going to upload>"
+  "file"  : "<file to upload>"
 }
