@@ -1,12 +1,14 @@
 Elastic terminalogy explained 
 
 1. 
+
 An Elasticsearch cluster is made up of one or more nodes. Each of these nodes contains indexes which are split into 
 multiple shards. Elasticsearch makes copies of these shards called replicas. 
 These (primary) shards and replicas are then placed on various nodes throughout the cluster.
 
 
 2.
+
 Elasticsearch provides a handy "traffic lights" classification of cluster health. Here is a simple explanation of each of 
 the options.
 
@@ -24,6 +26,7 @@ cluster only consists of a single node, so the replicas remain unasigned simply 
 contain them.. This can fix by adding another node to the cluster.
 
 4.
+
 When the cluster is yellow, everything is OK however your replica rules are not satisfied: Requests can still be 
 handled successfully, but if ever your server completly fails (and corrupts), you risk losing some of your documents 
 if you havn't got a replica of the data elsewhere in the cluster. The status will update to green once your cluster 
